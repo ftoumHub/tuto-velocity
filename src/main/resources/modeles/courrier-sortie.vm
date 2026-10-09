@@ -1,0 +1,26 @@
+## Courrier de sortie d'hospitalisation.
+## Données : $patient, $sejour, $traitements, $dateCourrier
+## Outils  : $dates, $texte — Macros : #civilite, #accord (macros-courrier.vm)
+#parse("modeles/entete.vm")
+
+Le $dates.enLettres($dateCourrier)
+
+Objet : courrier de sortie
+
+Cher confrère,
+
+J'ai pris en charge #civilite($patient) $patient.prenom $texte.majuscules($patient.nom), #accord($patient "né" "née") le $dates.court($patient.dateNaissance), hospitalisé#accord($patient "" "e") du $dates.court($sejour.dateEntree) au $dates.court($sejour.dateSortie)#if($sejour.motif) pour $sejour.motif#end.
+
+#if($traitements.isEmpty())
+Aucun traitement de sortie.
+#else
+Traitement de sortie :
+#foreach($t in $traitements)
+  $foreach.count. $t.medicament – $t.posologie
+#end
+#end
+
+Bien confraternellement,
+$sejour.medecin
+
+#include("modeles/mentions.txt")

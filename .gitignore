@@ -1,0 +1,53 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse / STS
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+
+# Rapports de tests / Cucumber
+cucumber-report*/
+cucumber.json
+cucumber.html
+rerun.txt
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code (réglages locaux)
+.claude/settings.local.json

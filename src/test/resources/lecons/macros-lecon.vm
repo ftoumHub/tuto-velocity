@@ -1,0 +1,3 @@
+## Bibliothèque de macros utilisée par la leçon 6
+#macro(majuscule $texte)$texte.toUpperCase()#end
+#macro(puce $libelle)• $libelle#end

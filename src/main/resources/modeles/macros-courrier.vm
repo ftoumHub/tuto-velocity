@@ -1,0 +1,7 @@
+## =====================================================================
+## Bibliothèque de macros chargée au démarrage (propriété velocimacro.library).
+## Astuce : écrire chaque macro sur UNE ligne évite d'injecter des sauts
+## de ligne parasites à chaque appel.
+## =====================================================================
+#macro(civilite $p)#if($p.feminin)Madame#{else}Monsieur#end#end
+#macro(accord $p $masculin $feminin)#if($p.feminin)$feminin#{else}$masculin#end#end
